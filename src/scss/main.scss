@@ -222,8 +222,9 @@ b{
 	&__bggirl{
 		position: absolute;
 		z-index: 3;
-		right: 160px;
-		top: 25px;
+		left: 50%;
+		bottom: 0px;
+		transform: translateX(11.3%);
 		@media(max-width: 992px){
 			display: none;
 		}
@@ -235,7 +236,8 @@ b{
 		bottom: 0px;
 		max-width: 571px;
 		width: 100%;
-		right: 127px;
+		left: 50%;
+		transform: translateX(2%);
 		@media(max-width: 992px){
 			right: 0; 
 		}
@@ -245,7 +247,8 @@ b{
 		position: absolute;
 		z-index: 1;
 		top: 0;
-		right: -10px;
+		left: 50%;
+		transform: translateX(-8.5%);
 		width: 790px;
 		@media(max-width: 992px){
 			top: initial;
@@ -713,6 +716,9 @@ b{
 
 .advantages{
 	overflow: hidden;
+	@media(max-width: 992px){
+		padding-bottom: 50px;
+	}
 	p{
 		margin-top: 15px;
 	}
@@ -831,6 +837,23 @@ b{
 .popup{
 	padding: 30px;
 	border-radius: 10px;
+	&__title{
+		font-family: var(--700);
+		font-size: 24px;
+		text-align: center;
+	}
+	&__tagtitle{
+		margin-top: 5px;
+		margin-bottom: 30px;
+		color: var(--grey2);
+		text-align: center;
+	}
+	&-thanks{
+		&__icon{
+			width: 115px;
+			margin: 0 auto;
+		}
+	}
 }
 
 .fancybox__content>.carousel__button.is-close{

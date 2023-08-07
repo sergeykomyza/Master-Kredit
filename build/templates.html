@@ -41,12 +41,12 @@
         </div>
       </div>
     </footer>
-    <div class="popup" id="form-order">
+    <div class="popup" id="form-order" style="display:none">
       <div class="popup__form">
         <form class="form" action="#">
           <div class="form__head"> 
-            <div class="form__title">Форма заказа</div>
-            <p class="form__tagtitle">Заполните форму ниже и мы свяжемся <br/> с вами <b>в ближайшее время</b></p>
+            <div class="popup__title">Форма заказа</div>
+            <p class="popup__tagtitle">Заполните форму ниже и мы свяжемся <br/> с вами <b>в ближайшее время</b></p>
           </div>
           <div class="form__fields"> 
             <div class="form__field"> 
@@ -55,7 +55,7 @@
             <div class="form__field"> 
               <input class="js-maskPhone" type="text" placeholder="Ваш телефон"/>
             </div>
-            <button class="button form__button">Получить консультацию</button>
+            <button class="button form__button" data-fancybox="thanks" data-src="#thanks">Получить консультацию</button>
           </div>
           <div class="agree">
             <label class="agree__wrap">
@@ -64,6 +64,11 @@
           </div>
         </form>
       </div>
+    </div>
+    <div class="popup popup-thanks" id="thanks" style="display:none"><img class="popup-thanks__icon" src="img/icon-thanks.svg" alt="@"/>
+      <div class="popup__title">Спасибо!!!</div>
+      <p class="popup__tagtitle">Ваш запрос обрабатывается, <b>мы перезвоним <br/> вам</b> в ближайшее время</p>
+      <button class="button popup__button js-closeFancybox">Спасибо!!!</button>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>

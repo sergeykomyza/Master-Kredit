@@ -22,6 +22,10 @@
 //     window.addEventListener('scroll', headerActiveToggle) // ПРИ СКРОЛЛЕ
 // });
 
+document.querySelector('.js-closeFancybox').addEventListener('click', function () {
+	Fancybox.close()
+})
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ МАСКА ДЛЯ ИНПУТОВ (https://github.com/RobinHerbots/Inputmask)
 const inputMask = () => {
 	$(".js-maskPhone").inputmask({
@@ -285,7 +289,6 @@ const accordeons = (box, item, header, content, openedClass, closedClass) => {
 	}
 }
 
-
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GSAP
 const animation = () => {
 	function parallax($elem, $val, $trigger, $start, $end){
@@ -304,15 +307,19 @@ const animation = () => {
 			},
 		})
 	}
-	parallax(".js-animate1",  500, '.home',    'top 100', '+=1500')
-	parallax(".js-animate3", -500, '.home',    'top 100', '+=1500')
-	parallax(".js-animate4",  500, '.consult', 'top 90%', '+=3500')
+	parallax(".js-animate1",  500, '.home',    'top 100', '+=9500')
+	parallax(".js-animate3", -500, '.home',    'top 100', '+=9500')
+	parallax(".js-animate4",  500, '.consult', 'top 90%', '+=13500')
 	parallax(".js-animate5", -500, '.consult', 'top 90%', '+=3500')
 	parallax(".js-animate6",  200, '.consult2', 'top 90%', '+=3500')
 	if(document.documentElement.clientWidth > 992){
-		parallax(".director",     200, '.advantages', 'top 90%', '+=1500')
+		parallax(".director", 200, '.advantages', 'top 90%', '+=1500')
 	}
 
+	gsap.from('.home__content', {
+		y: -500,
+		opacity: 0,
+	})
 	gsap.from('.js-animate7', {
 		y: -500,
 		opacity: 0,
@@ -446,12 +453,5 @@ const map = () => {
 inputMask();
 sliders();
 calculator();
-accordeons(
-	".accordeon",
-	".accordeon__item",
-	".accordeon__header",
-	".accordeon__content",
-	"accordeon__item opened",
-	"accordeon__item closed"
-)
+accordeons(".accordeon", ".accordeon__item", ".accordeon__header", ".accordeon__content", "accordeon__item opened", "accordeon__item closed")
 animation()
