@@ -1,9 +1,13 @@
 section.home 
+	img.home__bggirl.js-animate1(src="img/home-bg-girl.webp", alt="@")
+	img.home__bglogo.js-animate2(src="img/bg-logo.webp", alt="@")
+	img.home__bgmoney.js-animate3(src="img/home-bg-money.webp", alt="@")
 	.container
-		h1.title.home__title Поможем одобрить кредит #[br] #[span.color-red в течение 15 минут]
-		p.home__tagtitle Оказываем помощь в получении денег для:
-		.home__services
-			each item in ['Ипотека','Кредит под залог','Кредит на бизнес','Рефинансирование','Кредит наличными','Господдержка']
-				span.home__service= item
-		button.button.home__button Получить деньги
+		.home__content
+			h1.title.home__title Поможем одобрить кредит #[br] #[span.color-red в течение 15 минут]
+			p.home__tagtitle Оказываем помощь в получении денег для:
+			.home__services
+				each item in ['Ипотека','Кредит под залог','Кредит на бизнес','Рефинансирование','Кредит наличными','Господдержка']
+					span.home__service= item
+			button.button.home__button Получить деньги
 

@@ -22,7 +22,7 @@
           <div class="desktop">
             <div class="header__phone"> <span class="header__schedule">Ежедневно с 8:00 до 18:00</span><a class="header__phonenum" href="tel:+7 495 99-99-999">+7 495 99-99-999</a></div>
           </div>
-          <button class="header__button"> <span class="desktop">Заказать звонок</span>
+          <button class="header__button" data-fancybox="form-order" data-src="#form-order"> <span class="desktop">Заказать звонок</span>
             <svg class="mobile" height="1em" viewBox="0 0 512 512">
               <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"></path>
             </svg>
@@ -30,18 +30,20 @@
         </div>
       </div>
     </header>
-    <section class="home"> 
+    <section class="home"> <img class="home__bggirl js-animate1" src="img/home-bg-girl.webp" alt="@"/><img class="home__bglogo js-animate2" src="img/bg-logo.webp" alt="@"/><img class="home__bgmoney js-animate3" src="img/home-bg-money.webp" alt="@"/>
       <div class="container">
-        <h1 class="title home__title">Поможем одобрить кредит <br/> <span class="color-red">в течение 15 минут</span></h1>
-        <p class="home__tagtitle">Оказываем помощь в получении денег для:</p>
-        <div class="home__services"><span class="home__service">Ипотека</span><span class="home__service">Кредит под залог</span><span class="home__service">Кредит на бизнес</span><span class="home__service">Рефинансирование</span><span class="home__service">Кредит наличными</span><span class="home__service">Господдержка</span>
+        <div class="home__content">
+          <h1 class="title home__title">Поможем одобрить кредит <br/> <span class="color-red">в течение 15 минут</span></h1>
+          <p class="home__tagtitle">Оказываем помощь в получении денег для:</p>
+          <div class="home__services"><span class="home__service">Ипотека</span><span class="home__service">Кредит под залог</span><span class="home__service">Кредит на бизнес</span><span class="home__service">Рефинансирование</span><span class="home__service">Кредит наличными</span><span class="home__service">Господдержка</span>
+          </div>
+          <button class="button home__button">Получить деньги</button>
         </div>
-        <button class="button home__button">Получить деньги</button>
       </div>
     </section>
     <section class="calculate">
       <div class="container"> 
-        <div class="title calculate__title">Рассчитать свой кредит</div>
+        <div class="title calculate__title js-animate7">Рассчитать свой кредит</div>
         <div class="calculate__box">
           <div class="calculate__fields">
             <div class="select js-borderColor">
@@ -57,7 +59,7 @@
                 <div class="select__item" data-percent="5.3" data-maxsum="12000000" data-period="30">Господдержка</div>
                 <div class="select__item" data-percent="7.5" data-maxsum="110000000" data-period="30">Ипотека</div>
                 <div class="select__item" data-percent="8" data-maxsum="50000000" data-period="30">Рефинансирование</div>
-                <div class="select__item" data-percent="11" data-maxsum="110000000" data-period="20">Кретид под залог</div>
+                <div class="select__item" data-percent="11" data-maxsum="110000000" data-period="20">Кредит под залог</div>
                 <div class="select__item" data-percent="9.5" data-maxsum="10000000" data-period="7">Кредит наличными</div>
                 <div class="select__item" data-percent="13" data-maxsum="150000000" data-period="5">Кредит на бизнес</div>
               </div>
@@ -71,6 +73,10 @@
               <label class="calculate__label">Cрок кредита</label>
               <input class="calculate__input js-periodInput" type="text" value="1"/>
             </div>
+          </div>
+          <div class="calculate__info"> 
+            <p><b>Аннуитетные платежи</b> одинаковы, но соотношение в них основного долга и процентов — разное. Здесь проценты за пользование начисляются на остаток долга, поэтому в начале кредита — процентов больше, основного долга — меньше. А к концу кредита — наоборот. </p>
+            <p><b>Дифференцированный платеж</b> - это система погашения кредита, при которой заемщик ежемесячно вносит разные суммы, размер которых с каждым разом уменьшается.</p>
           </div>
           <div class="result">
             <div class="result__item"> <span class="result__name">Ежемесячный платеж</span>
@@ -190,7 +196,7 @@
         </div>
       </div>
     </section>
-    <section class="consult">
+    <section class="consult"><img class="consult__bglogo" src="img/bg-logo.webp" alt="@"/><img class="consult__bggirl js-animate4" src="img/consult-bg-girl.webp" alt="@"/><img class="consult__bgmoney js-animate5" src="img/consult-bg-money.webp" alt="@"/>
       <div class="container"> 
         <div class="consult__box"> 
           <div class="consult__info"> 
@@ -303,11 +309,163 @@
         </div>
       </div>
     </section>
-    <footer class="footer"></footer>
+    <section class="advantages"> 
+      <div class="container"> 
+        <div class="advantages__box">
+          <div class="advantages__info">
+            <h5 class="title advantages__title">Почему стоит <br/> <span class="color-red">обратиться именно к нам</span></h5>
+            <p><b>КредитМастер</b> – это команда высококвалифицированных кредитных брокеров, предоставляющих широкий спектр услуг по решению и закрытию даже самых сложных финансовых вопросов. Все, что вам нужно сделать – просто довериться нашим экспертам. Результатом будет абсолютно чистая сделка с нулевым стрессовым фоном и максимальной экономией вашего времени.</p>
+            <p><b>Миссия компании</b> – помочь людям, ведь именно их мы ставим во главу угла. Глубокое погружение в задачу, детальное консультирование, подготовка и заполнение всех необходимых документов – все это имеет под собой лишь одну цель: подарить вам возможность реализовать свою кредитную мечту.</p>
+            <ul class="advantages__list"> 
+              <li>Оплата по факту получения денег</li>
+              <li>Платите только за результат</li>
+              <li>Нет рисков</li>
+              <li>95% - одобрение</li>
+            </ul>
+            <button class="button advantages__button">Получить деньги</button>
+          </div>
+          <figure class="director"><img class="director__foto" src="img/director.webp" alt="@"/>
+            <figcaption class="director__name">Игорь Катамаранов <br/> <span class="director__name--status">Ген. директор</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section class="partners"> 
+      <div class="container"></div>
+    </section>
+    <section class="faq"> 
+      <div class="container"> 
+        <h6 class="title faq__title">Ответы на самые <br/> <span class="color-red">частые вопросы</span></h6>
+        <div class="accordeon">
+          <div class="accordeon__item">
+            <div class="accordeon__header"> <span class="accordeon__title">Кто такой кредитный брокер?</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M0.669922 3.04336C0.423828 3.12539 0.202344 3.32227 0.0792969 3.56836C0.021875 3.68594 0.0136719 3.74336 0.0136719 3.99219C0.0136719 4.25469 0.0191406 4.29297 0.0902344 4.42969C0.155859 4.55273 0.751953 5.1625 3.27578 7.68906C5.85703 10.273 6.41211 10.8145 6.54883 10.8883C6.70469 10.973 6.72656 10.9785 7 10.9785C7.27344 10.9785 7.29531 10.973 7.45117 10.8883C7.59062 10.8145 8.14023 10.2758 10.7352 7.67539C13.2098 5.19805 13.866 4.52539 13.9207 4.41602C13.9781 4.29844 13.9863 4.24102 13.9863 3.99219C13.9863 3.72969 13.9781 3.69141 13.907 3.54922C13.8113 3.36055 13.6527 3.20195 13.4531 3.09805C13.3164 3.02969 13.2754 3.02148 13.0293 3.02148C12.5508 3.02148 12.8242 2.78359 9.72891 5.87617L7 8.59961L4.27383 5.87617C1.20859 2.81914 1.45195 3.02969 1.01172 3.01602C0.875 3.01328 0.735547 3.02422 0.669922 3.04336Z" fill="#003868"></path>
+              </svg>
+            </div>
+            <div class="accordeon__content"> 
+              <div class="accordeon__inner">Мы оказываем помощь в получении кредита по всей РФ. Основная наша задача - сэкономить ваше время и помочь вам получить кредит на лучших условиях.</div>
+            </div>
+          </div>
+          <div class="accordeon__item">
+            <div class="accordeon__header"> <span class="accordeon__title">Кому нужна помощь в кредите?</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M0.669922 3.04336C0.423828 3.12539 0.202344 3.32227 0.0792969 3.56836C0.021875 3.68594 0.0136719 3.74336 0.0136719 3.99219C0.0136719 4.25469 0.0191406 4.29297 0.0902344 4.42969C0.155859 4.55273 0.751953 5.1625 3.27578 7.68906C5.85703 10.273 6.41211 10.8145 6.54883 10.8883C6.70469 10.973 6.72656 10.9785 7 10.9785C7.27344 10.9785 7.29531 10.973 7.45117 10.8883C7.59062 10.8145 8.14023 10.2758 10.7352 7.67539C13.2098 5.19805 13.866 4.52539 13.9207 4.41602C13.9781 4.29844 13.9863 4.24102 13.9863 3.99219C13.9863 3.72969 13.9781 3.69141 13.907 3.54922C13.8113 3.36055 13.6527 3.20195 13.4531 3.09805C13.3164 3.02969 13.2754 3.02148 13.0293 3.02148C12.5508 3.02148 12.8242 2.78359 9.72891 5.87617L7 8.59961L4.27383 5.87617C1.20859 2.81914 1.45195 3.02969 1.01172 3.01602C0.875 3.01328 0.735547 3.02422 0.669922 3.04336Z" fill="#003868"></path>
+              </svg>
+            </div>
+            <div class="accordeon__content"> 
+              <div class="accordeon__inner">Мы оказываем помощь в получении кредита по всей РФ. Основная наша задача - сэкономить ваше время и помочь вам получить кредит на лучших условиях.</div>
+            </div>
+          </div>
+          <div class="accordeon__item">
+            <div class="accordeon__header"> <span class="accordeon__title">Преимущества работы с нами?</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M0.669922 3.04336C0.423828 3.12539 0.202344 3.32227 0.0792969 3.56836C0.021875 3.68594 0.0136719 3.74336 0.0136719 3.99219C0.0136719 4.25469 0.0191406 4.29297 0.0902344 4.42969C0.155859 4.55273 0.751953 5.1625 3.27578 7.68906C5.85703 10.273 6.41211 10.8145 6.54883 10.8883C6.70469 10.973 6.72656 10.9785 7 10.9785C7.27344 10.9785 7.29531 10.973 7.45117 10.8883C7.59062 10.8145 8.14023 10.2758 10.7352 7.67539C13.2098 5.19805 13.866 4.52539 13.9207 4.41602C13.9781 4.29844 13.9863 4.24102 13.9863 3.99219C13.9863 3.72969 13.9781 3.69141 13.907 3.54922C13.8113 3.36055 13.6527 3.20195 13.4531 3.09805C13.3164 3.02969 13.2754 3.02148 13.0293 3.02148C12.5508 3.02148 12.8242 2.78359 9.72891 5.87617L7 8.59961L4.27383 5.87617C1.20859 2.81914 1.45195 3.02969 1.01172 3.01602C0.875 3.01328 0.735547 3.02422 0.669922 3.04336Z" fill="#003868"></path>
+              </svg>
+            </div>
+            <div class="accordeon__content"> 
+              <div class="accordeon__inner">Мы оказываем помощь в получении кредита по всей РФ. Основная наша задача - сэкономить ваше время и помочь вам получить кредит на лучших условиях.</div>
+            </div>
+          </div>
+          <div class="accordeon__item">
+            <div class="accordeon__header"> <span class="accordeon__title">Какая стоимость услуг?</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M0.669922 3.04336C0.423828 3.12539 0.202344 3.32227 0.0792969 3.56836C0.021875 3.68594 0.0136719 3.74336 0.0136719 3.99219C0.0136719 4.25469 0.0191406 4.29297 0.0902344 4.42969C0.155859 4.55273 0.751953 5.1625 3.27578 7.68906C5.85703 10.273 6.41211 10.8145 6.54883 10.8883C6.70469 10.973 6.72656 10.9785 7 10.9785C7.27344 10.9785 7.29531 10.973 7.45117 10.8883C7.59062 10.8145 8.14023 10.2758 10.7352 7.67539C13.2098 5.19805 13.866 4.52539 13.9207 4.41602C13.9781 4.29844 13.9863 4.24102 13.9863 3.99219C13.9863 3.72969 13.9781 3.69141 13.907 3.54922C13.8113 3.36055 13.6527 3.20195 13.4531 3.09805C13.3164 3.02969 13.2754 3.02148 13.0293 3.02148C12.5508 3.02148 12.8242 2.78359 9.72891 5.87617L7 8.59961L4.27383 5.87617C1.20859 2.81914 1.45195 3.02969 1.01172 3.01602C0.875 3.01328 0.735547 3.02422 0.669922 3.04336Z" fill="#003868"></path>
+              </svg>
+            </div>
+            <div class="accordeon__content"> 
+              <div class="accordeon__inner">Мы оказываем помощь в получении кредита по всей РФ. Основная наша задача - сэкономить ваше время и помочь вам получить кредит на лучших условиях.</div>
+            </div>
+          </div>
+          <div class="accordeon__item">
+            <div class="accordeon__header"> <span class="accordeon__title">Как происходит оплата за услуги?</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M0.669922 3.04336C0.423828 3.12539 0.202344 3.32227 0.0792969 3.56836C0.021875 3.68594 0.0136719 3.74336 0.0136719 3.99219C0.0136719 4.25469 0.0191406 4.29297 0.0902344 4.42969C0.155859 4.55273 0.751953 5.1625 3.27578 7.68906C5.85703 10.273 6.41211 10.8145 6.54883 10.8883C6.70469 10.973 6.72656 10.9785 7 10.9785C7.27344 10.9785 7.29531 10.973 7.45117 10.8883C7.59062 10.8145 8.14023 10.2758 10.7352 7.67539C13.2098 5.19805 13.866 4.52539 13.9207 4.41602C13.9781 4.29844 13.9863 4.24102 13.9863 3.99219C13.9863 3.72969 13.9781 3.69141 13.907 3.54922C13.8113 3.36055 13.6527 3.20195 13.4531 3.09805C13.3164 3.02969 13.2754 3.02148 13.0293 3.02148C12.5508 3.02148 12.8242 2.78359 9.72891 5.87617L7 8.59961L4.27383 5.87617C1.20859 2.81914 1.45195 3.02969 1.01172 3.01602C0.875 3.01328 0.735547 3.02422 0.669922 3.04336Z" fill="#003868"></path>
+              </svg>
+            </div>
+            <div class="accordeon__content"> 
+              <div class="accordeon__inner">Мы оказываем помощь в получении кредита по всей РФ. Основная наша задача - сэкономить ваше время и помочь вам получить кредит на лучших условиях.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="consult consult2"><img class="consult__bglogo" src="img/bg-logo.webp" alt="@"/><img class="consult__bggirl js-animate6" src="img/consult-bg2-girl.webp" alt="@"/>
+      <div class="container"> 
+        <div class="consult__box"> 
+          <div class="consult__info"> 
+            <h3 class="title consult__title">У вас остались <br/> <span class="color-red">вопросы по расчету</span> <br/> кредитного предложения?</h3>
+            <p class="consult__text">Наши специалисты кредитного брокеража со стажем ответят на все ваши вопросы, касающиеся кредитования. Будь то ставки, условия или требования - мы предоставим вам исчерпывающую информацию, чтобы помочь вам принять взвешенное решение. Не стесняйтесь связаться с нами и задать любые вопросы, которые у вас возникли</p>
+            <ul class="consult__list"> 
+              <li>Индивидуальный подход, консультация, вопросы</li>
+              <li>Экспертное мнение, знания, объективные ответы</li>
+              <li>Большой опыт работы, отличная репутация</li>
+              <li>Удобный выбор кредита, различные способы связи</li>
+            </ul>
+          </div>
+          <div class="consult__form">
+            <form class="form" action="#">
+              <div class="form__head"> 
+                <div class="form__title">Заполните форму</div>
+                <p class="form__tagtitle">и мы свяжемся с вами в течении <br/> 5 минут в рабочее время</p>
+              </div>
+              <div class="form__fields"> 
+                <div class="form__field"> 
+                  <input type="text" placeholder="Как вас зовут?"/>
+                </div>
+                <div class="form__field"> 
+                  <input class="js-maskPhone" type="text" placeholder="Ваш телефон"/>
+                </div>
+                <button class="button form__button">Получить консультацию</button>
+              </div>
+              <div class="agree">
+                <label class="agree__wrap">
+                  <input class="agree__input" type="checkbox" checked="checked" autocomplete="off"/><span class="agree__checkbox"></span><span class="agree__text">Нажимая на кнопку, вы соглашаетесь с <br/> <a href="">политикой конфиденциальности </a></span>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container"> 
+        <div class="footer__box"> 
+          <div class="footer__links"> <a href="#">Пользавательское соглашение</a><a href="#">Политика конфиденциальности</a></div>
+          <div class="dev"> <span class="dev__text">Создание сайта</span><a class="dev__logo" href=""> <img src="img/scrum-logo.png" alt="@"/></a></div>
+        </div>
+      </div>
+    </footer>
+    <div class="popup" id="form-order">
+      <div class="popup__form">
+        <form class="form" action="#">
+          <div class="form__head"> 
+            <div class="form__title">Форма заказа</div>
+            <p class="form__tagtitle">Заполните форму ниже и мы свяжемся <br/> с вами <b>в ближайшее время</b></p>
+          </div>
+          <div class="form__fields"> 
+            <div class="form__field"> 
+              <input type="text" placeholder="Как вас зовут?"/>
+            </div>
+            <div class="form__field"> 
+              <input class="js-maskPhone" type="text" placeholder="Ваш телефон"/>
+            </div>
+            <button class="button form__button">Получить консультацию</button>
+          </div>
+          <div class="agree">
+            <label class="agree__wrap">
+              <input class="agree__input" type="checkbox" checked="checked" autocomplete="off"/><span class="agree__checkbox"></span><span class="agree__text">Нажимая на кнопку, вы соглашаетесь с <br/> <a href="">политикой конфиденциальности </a></span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="https://rawgit.com/RobinHerbots/Inputmask/5.x/dist/jquery.inputmask.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

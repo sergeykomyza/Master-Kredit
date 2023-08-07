@@ -3,7 +3,7 @@
 		{name: 'Господдержка',     dataPercent: '5.3', dataSum: '12000000',  dataPeriod: '30'},
 		{name: 'Ипотека',          dataPercent: '7.5', dataSum: '110000000', dataPeriod: '30'},
 		{name: 'Рефинансирование', dataPercent: '8',   dataSum: '50000000',  dataPeriod: '30'},
-		{name: 'Кретид под залог', dataPercent: '11',  dataSum: '110000000', dataPeriod: '20'},
+		{name: 'Кредит под залог', dataPercent: '11',  dataSum: '110000000', dataPeriod: '20'},
 		{name: 'Кредит наличными', dataPercent: '9.5', dataSum: '10000000',  dataPeriod: '7'},
 		{name: 'Кредит на бизнес', dataPercent: '13',  dataSum: '150000000', dataPeriod: '5'}
 	]
@@ -11,9 +11,8 @@
 
 section.calculate
 	.container 
-		.title.calculate__title Рассчитать свой кредит
+		.title.calculate__title.js-animate7 Рассчитать свой кредит
 		.calculate__box
-
 			.calculate__fields
 				.select.js-borderColor
 					label.calculate__label Тип кредитования
@@ -32,6 +31,10 @@ section.calculate
 				.calculate__field.js-borderColor
 					label.calculate__label Cрок кредита
 					input.calculate__input.js-periodInput(type="text" value="1")
+
+			.calculate__info 
+				p #[b Аннуитетные платежи] одинаковы, но соотношение в них основного долга и процентов — разное. Здесь проценты за пользование начисляются на остаток долга, поэтому в начале кредита — процентов больше, основного долга — меньше. А к концу кредита — наоборот. 
+				p #[b Дифференцированный платеж] - это система погашения кредита, при которой заемщик ежемесячно вносит разные суммы, размер которых с каждым разом уменьшается.
 
 			.result
 				.result__item 

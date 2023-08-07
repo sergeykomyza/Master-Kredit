@@ -43,6 +43,7 @@
 			margin-right: 5px;
 			background: #0D9B4E;
 			border-radius: 50%;
+			animation: animateDot 2s ease-in-out infinite;
 		}
 	}
 	&__phonenum{
@@ -73,5 +74,17 @@
 			background: var(--blueDark);
 			color: #FFF;
 		}
+	}
+}
+
+@keyframes animateDot {
+	0%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
 	}
 }
