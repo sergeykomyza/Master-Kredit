@@ -1,0 +1,38 @@
+-
+	const slides = [
+		{title: 'Оставьте заявку',  text: 'вы связываетесь с нами удобным вам способом',    img: 'step-1.webp'},
+		{title: 'Консультация',     text: 'консультируем вас по возможностям кредитования', img: 'step-2.webp'},
+		{title: 'Договор',          text: 'заключаем договор, подаем заявку в банк',        img: 'step-3.webp'},
+		{title: 'Получаете деньги', text: 'вы получаете одобрение и наличные в банке',      img: 'step-4.webp'},
+		{title: 'Оплата комиссии',  text: 'оплачиваете нам комиссию согласно договора ',    img: 'step-5.webp'}
+	]
+
+section.steps 
+	.container 
+		.steps__head
+			h4.title.steps__title Схема работы #[span.color-red с нами]
+			.slider-nav 
+				button.slider-nav__btn.js-slidePrev
+					svg(width='68' height='64' viewBox='0 0 68 64' fill='none')
+						g(clip-path='url(#clip0_11_333)')
+							path(d='M67.8774 31.9996H1.47119M1.47119 31.9996L12.0962 21.3329M1.47119 31.9996L12.0962 42.6662' stroke='#FF1B1C' stroke-linecap='square' stroke-linejoin='round')
+						defs
+							clippath#clip0_11_333
+								rect(width='68' height='64' fill='white' transform='matrix(-1 0 0 1 68 0)')
+				button.slider-nav__btn.js-slideNext
+					svg(width='68' height='64' viewBox='0 0 68 64' fill='none')
+						g(clip-path='url(#clip0_11_331)')
+							path(d='M0.122559 31.9996H66.5288M66.5288 31.9996L55.9038 21.3329M66.5288 31.9996L55.9038 42.6662' stroke='#FF1B1C' stroke-linecap='square' stroke-linejoin='round')
+						defs
+							clippath#clip0_11_331
+								rect(width='68' height='64' fill='white')
+		.steps__slider 	
+			.swiper.js-sliderSteps 
+				.swiper-wrapper 
+					each item, i in slides 
+						.swiper-slide.step
+							.step__info
+								.step__num= `0${i+1}`
+								.step__title= item.title
+								p.step__text= item.text
+							img.step__img(src="img/"+item.img, alt="@")

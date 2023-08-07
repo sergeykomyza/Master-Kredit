@@ -1,0 +1,15 @@
+form.form(action="#")
+	.form__head 
+		.form__title Заполните форму
+		p.form__tagtitle и мы свяжемся с вами в течении #[br] 5 минут в рабочее время
+	.form__fields 
+		.form__field 
+			input(type="text" placeholder="Как вас зовут?")
+		.form__field 
+			input.js-maskPhone(type="text" placeholder="Ваш телефон")
+		button.button.form__button Получить консультацию
+	.agree
+		label.agree__wrap
+			input.agree__input(type="checkbox" checked autocomplete="off")
+			span.agree__checkbox
+			span.agree__text Нажимая на кнопку, вы соглашаетесь с #[br] #[a(href="") политикой конфиденциальности ]

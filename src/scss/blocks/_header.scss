@@ -1,0 +1,77 @@
+.header{
+	padding-top: 17px;
+	padding-bottom: 25px;
+	&__box{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__email{
+		font-family: var(--700);
+		font-size: 16px;
+		color: var(--blue);
+		text-decoration: underline;
+	}
+	&__messengers{
+		display: flex;
+		gap: 25px;
+	}
+	&__messenger{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+		background: #F1F5F9;
+	}
+	&__phone{
+		display: flex;
+		flex-direction: column;
+	}
+	&__schedule{
+		position: relative;
+		display: flex;
+		align-items: center;
+		font-family: var(--400);
+		font-size: 12px;
+		color: var(--grey);
+		&:before{
+			content: '';
+			width: 5px;
+			height: 5px;
+			margin-right: 5px;
+			background: #0D9B4E;
+			border-radius: 50%;
+		}
+	}
+	&__phonenum{
+		font-family: var(--700);
+		font-size: 20px;
+		color: var(--blue);
+	}
+	&__button{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 200px;
+		height: 42px;
+		font-size: 14px;
+		font-family: var(--500);
+		color: var(--blue);
+		border: 1px solid var(--blue);
+		border-radius: 10px;
+		transition: all .3s;
+		@media(max-width: 992px){
+			width: 42px;
+		}
+		&:hover{
+			background: var(--blue);
+			color: #FFF;
+		}
+		&:active{
+			background: var(--blueDark);
+			color: #FFF;
+		}
+	}
+}
