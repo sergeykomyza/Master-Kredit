@@ -264,6 +264,10 @@ b{
 	padding-top: 70px;
 	overflow: hidden;
 	
+	&__inner{
+		overflow: hidden;
+	}
+
 	&__box{
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
