@@ -25,7 +25,7 @@ section.calculate
 						.select__body
 							each item in dataSelect 
 								.select__item(data-percent= item.dataPercent data-maxsum= item.dataSum data-period= item.dataPeriod)= item.name
-					.calculate__field.js-borderColor
+					.calculate__field.js-borderColor.js-sumField
 						label.calculate__label Сумма кредита
 						input.calculate__input.js-sum(type="text" value="1000000")
 						input.calculate__input.js-sumDouble(type="text" value="1000000" style="display:none")

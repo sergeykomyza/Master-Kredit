@@ -224,10 +224,12 @@ const calculator = () => {
 		}
 		// если значение скрытыго инпута меньше миллиона
 		if(sumDouble.value < 1000000){
-			// тогда значение видимого инпута не может измениться меньше миллиона с визуальной разбивкой на разряды
-			this.value = '1 000 000'
-			// значение скрытого инпута также не может быть меньше миллиона
-			sumDouble.value = 1000000
+            sumDouble.value = 0
+            document.querySelector('.js-sumField').querySelector('.calculate__label').innerHTML = "😢 Выберите сумму больше миллиона"
+            document.querySelector('.js-sumField').classList.add('is-borderError')
+		} else if(sumDouble.value >= 1000000){
+		    document.querySelector('.js-sumField').querySelector('.calculate__label').innerHTML = 'Сумма кредита'
+            document.querySelector('.js-sumField').classList.remove('is-borderError')
 		}
 		formula();
 	})

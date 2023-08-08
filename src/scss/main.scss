@@ -308,6 +308,12 @@ b{
 				color: var(--blue);
 			}
 		}
+		&.is-borderError{
+			border-color: var(--red);
+			.calculate__label{
+				color: var(--red);
+			}
+		}
 	}
 	
 	&__input{
