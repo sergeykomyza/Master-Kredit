@@ -1,4 +1,36 @@
+-
+	const logo = [
+		{logoName: 'psb',     logoSrc: 'logo-psb-bank.png'},
+		{logoName: 'gazprom', logoSrc: 'logo-gazprom-bank.png'},
+		{logoName: 'vtb',     logoSrc: 'logo-vtb-bank.png'},
+		{logoName: 'alfa',    logoSrc: 'logo-alfa-bank.png'},
+		{logoName: 'sber',    logoSrc: 'logo-sber.png'}
+	]
+
 section.partners 
 	.container
+		.partners__head
+			h6.title.partners__title Посмотрите #[br] #[span.color-red на наших партнеров]
+			.slider-nav 
+				button.slider-nav__btn.js-slidePrev
+					svg(width='68' height='64' viewBox='0 0 68 64' fill='none')
+						g(clip-path='url(#clip0_11_333)')
+							path(d='M67.8774 31.9996H1.47119M1.47119 31.9996L12.0962 21.3329M1.47119 31.9996L12.0962 42.6662' stroke='#FF1B1C' stroke-linecap='square' stroke-linejoin='round')
+						defs
+							clippath#clip0_11_333
+								rect(width='68' height='64' fill='white' transform='matrix(-1 0 0 1 68 0)')
+				button.slider-nav__btn.js-slideNext
+					svg(width='68' height='64' viewBox='0 0 68 64' fill='none')
+						g(clip-path='url(#clip0_11_331)')
+							path(d='M0.122559 31.9996H66.5288M66.5288 31.9996L55.9038 21.3329M66.5288 31.9996L55.9038 42.6662' stroke='#FF1B1C' stroke-linecap='square' stroke-linejoin='round')
+						defs
+							clippath#clip0_11_331
+								rect(width='68' height='64' fill='white')
+		.partners__slider 	
+			.swiper.js-sliderPartners 
+				.swiper-wrapper 
+					each item in logo
+						.swiper-slide
+							img(src="img/"+item.logoSrc, alt="@" class=`partners__logo partners__logo--${item.logoName}`)
 
 	

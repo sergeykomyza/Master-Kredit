@@ -36,8 +36,7 @@
           <h1 class="title home__title">Поможем одобрить кредит <br/> <span class="color-red">в течение 15 минут</span></h1>
           <p class="home__tagtitle">Оказываем помощь в получении денег для:</p>
           <div class="home__services"><span class="home__service">Ипотека</span><span class="home__service">Кредит под залог</span><span class="home__service">Кредит на бизнес</span><span class="home__service">Рефинансирование</span><span class="home__service">Кредит наличными</span><span class="home__service">Господдержка</span>
-          </div>
-          <button class="button home__button">Получить деньги</button>
+          </div><a class="button home__button js-scrollToSection" href="#consult">Получить деньги</a>
         </div>
       </div>
     </section>
@@ -94,8 +93,7 @@
                 <div class="result__box result__box--sm">
                   <output class="result__val js-percent">5.3 </output><span>%</span>
                 </div>
-              </div>
-              <button class="button result__button">Получить кредит</button>
+              </div><a class="button result__button js-scrollToSection" href="#consult">Получить кредит</a>
             </div>
           </div>
         </div>
@@ -198,7 +196,7 @@
         </div>
       </div>
     </section>
-    <section class="consult"><img class="consult__bglogo" src="img/bg-logo.webp" alt="@"/><img class="consult__bggirl js-animate4" src="img/consult-bg-girl.webp" alt="@"/><img class="consult__bgmoney js-animate5" src="img/consult-bg-money.webp" alt="@"/>
+    <section class="consult" id="consult"><img class="consult__bglogo" src="img/bg-logo.webp" alt="@"/><img class="consult__bggirl js-animate4" src="img/consult-bg-girl.webp" alt="@"/><img class="consult__bgmoney js-animate5" src="img/consult-bg-money.webp" alt="@"/>
       <div class="container"> 
         <div class="consult__box"> 
           <div class="consult__info"> 
@@ -323,8 +321,7 @@
               <li>Платите только за результат</li>
               <li>Нет рисков</li>
               <li>95% - одобрение</li>
-            </ul>
-            <button class="button advantages__button">Получить деньги</button>
+            </ul><a class="button advantages__button js-scrollToSection" href="#consult2">Получить деньги</a>
           </div>
           <figure class="director"><img class="director__foto" src="img/director.webp" alt="@"/>
             <figcaption class="director__name">Игорь Катамаранов <br/> <span class="director__name--status">Ген. директор</span></figcaption>
@@ -333,7 +330,48 @@
       </div>
     </section>
     <section class="partners"> 
-      <div class="container"></div>
+      <div class="container">
+        <div class="partners__head">
+          <h6 class="title partners__title">Посмотрите <br/> <span class="color-red">на наших партнеров</span></h6>
+          <div class="slider-nav"> 
+            <button class="slider-nav__btn js-slidePrev">
+              <svg width="68" height="64" viewBox="0 0 68 64" fill="none">
+                <g clip-path="url(#clip0_11_333)">
+                  <path d="M67.8774 31.9996H1.47119M1.47119 31.9996L12.0962 21.3329M1.47119 31.9996L12.0962 42.6662" stroke="#FF1B1C" stroke-linecap="square" stroke-linejoin="round"></path>
+                </g>
+                <defs>
+                  <clippath id="clip0_11_333">
+                    <rect width="68" height="64" fill="white" transform="matrix(-1 0 0 1 68 0)"></rect>
+                  </clippath>
+                </defs>
+              </svg>
+            </button>
+            <button class="slider-nav__btn js-slideNext">
+              <svg width="68" height="64" viewBox="0 0 68 64" fill="none">
+                <g clip-path="url(#clip0_11_331)">
+                  <path d="M0.122559 31.9996H66.5288M66.5288 31.9996L55.9038 21.3329M66.5288 31.9996L55.9038 42.6662" stroke="#FF1B1C" stroke-linecap="square" stroke-linejoin="round"></path>
+                </g>
+                <defs>
+                  <clippath id="clip0_11_331">
+                    <rect width="68" height="64" fill="white"></rect>
+                  </clippath>
+                </defs>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="partners__slider">	
+          <div class="swiper js-sliderPartners"> 
+            <div class="swiper-wrapper"> 
+              <div class="swiper-slide"><img class="partners__logo partners__logo--psb" src="img/logo-psb-bank.png" alt="@"/></div>
+              <div class="swiper-slide"><img class="partners__logo partners__logo--gazprom" src="img/logo-gazprom-bank.png" alt="@"/></div>
+              <div class="swiper-slide"><img class="partners__logo partners__logo--vtb" src="img/logo-vtb-bank.png" alt="@"/></div>
+              <div class="swiper-slide"><img class="partners__logo partners__logo--alfa" src="img/logo-alfa-bank.png" alt="@"/></div>
+              <div class="swiper-slide"><img class="partners__logo partners__logo--sber" src="img/logo-sber.png" alt="@"/></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="faq"> 
       <div class="container"> 
@@ -392,7 +430,7 @@
         </div>
       </div>
     </section>
-    <section class="consult consult2"><img class="consult__bglogo" src="img/bg-logo.webp" alt="@"/><img class="consult__bggirl js-animate6" src="img/consult-bg2-girl.webp" alt="@"/>
+    <section class="consult consult2" id="consult2"><img class="consult__bglogo" src="img/bg-logo.webp" alt="@"/><img class="consult__bggirl js-animate6" src="img/consult-bg2-girl.webp" alt="@"/>
       <div class="container"> 
         <div class="consult__box"> 
           <div class="consult__info"> 

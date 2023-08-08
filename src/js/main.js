@@ -1,10 +1,14 @@
-// ================================================== исключение по наименованию страницы
-// const contactsPage = window.location.pathname == '/contacts.html'
-// if(contactsPage){
-//     ...
-// }
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ПРОКРУТКА, ШАПКА
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+const scrollToSection = () => {
+	$('.js-scrollToSection').click(function () {
+		var scroll_elem = $(this).attr('href');
+		$('html, body').animate({
+			scrollTop: $(scroll_elem).offset().top
+		}, 1000);
+	});
+}
 // document.addEventListener('DOMContentLoaded', function () {
 //     // СКРОЛЛ К НУЖНОЙ СЕКЦИИ ПО КЛИКУ НА ПУНКТАХ МЕНЮ
 //     $('.menu__link').click(function () {
@@ -22,9 +26,11 @@
 //     window.addEventListener('scroll', headerActiveToggle) // ПРИ СКРОЛЛЕ
 // });
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 document.querySelector('.js-closeFancybox').addEventListener('click', function () {
 	Fancybox.close()
 })
+
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ МАСКА ДЛЯ ИНПУТОВ (https://github.com/RobinHerbots/Inputmask)
 const inputMask = () => {
@@ -40,8 +46,8 @@ const sliders = () => {
 		slidesPerView: 4,
 		spaceBetween: 30,
 		navigation: {
-			nextEl: ".js-slideNext",
-			prevEl: ".js-slidePrev",
+			nextEl: ".steps .js-slideNext",
+			prevEl: ".steps .js-slidePrev",
 		},
 		breakpoints: {
 			320: {
@@ -55,6 +61,32 @@ const sliders = () => {
 			},
 			992: {
 				slidesPerView: 4,
+			},
+		},
+	});
+	const swiper1 = new Swiper(".js-sliderPartners", {
+		loop: true,
+		slidesPerView: 5,
+		spaceBetween: 10,
+		navigation: {
+			nextEl: ".partners .js-slideNext",
+			prevEl: ".partners .js-slidePrev",
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+			},
+			565: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 4,
+			},
+			1200: {
+				slidesPerView: 5,
 			},
 		},
 	});
@@ -107,10 +139,10 @@ const calculator = () => {
 			currentItem = select.querySelector(".select__current");
 		selectHeader.forEach((item) => {
 			item.addEventListener("click", selectToggle);
-		});
+		})
 		selectItem.forEach((item) => {
 			item.addEventListener("click", selectChoose);
-		});
+		})
 		function selectToggle() {
 			this.parentElement.classList.toggle("is-active");
 		}
@@ -146,29 +178,32 @@ const calculator = () => {
 			if (!select.contains(e.target)) {
 				select.classList.remove("is-active");
 			}
-		});
-	});
+		})
+	})
 
 	// ~~~~~~~~~~~~~~~~ формула расчета аннуитетного платежа - https://yandex.ru/images/search?img_url=https%3A%2F%2Fwww.credytoff.ru%2Fwp-content%2Fuploads%2F2017%2F11%2FKak-rasschitat-annuitetnyj-platezh-po-ipoteke.jpg&lr=10758&pos=23&rpt=simage&source=serp&text=%D1%84%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0%20%D0%B0%D1%83%D1%82%D0%B5%D0%BD%D1%82%D0%B8%D1%87%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%BF%D0%BB%D0%B0%D1%82%D0%B5%D0%B6%D0%B0
 	function formula() {
 		// процентная ставка по займу в мес
-		let i = percent.value / (100 * 12);
+		let i = percent.value / (100 * 12)
 		// кол-во месяцев
-		let n = periodInput.value * 12;
+		let n = periodInput.value * 12
 		// формула расчета аннуитетного платежа
-		let k = (i * Math.pow(1 + i, n)) / (Math.pow(1 + i, n) - 1);
+		let k = (i * Math.pow(1 + i, n)) / (Math.pow(1 + i, n) - 1)
 		// в значении Ежемесячный платеж выводим результат
 		// Number(this.value.replace(/\D/g,'')).toLocaleString('ru') - разбивает число на разряды
 		resultSum.innerHTML = Math.round(
 			sumDouble.value.replace(/\D/g, "") * k
-		).toLocaleString("ru");
+		).toLocaleString("ru")
 	}
 	formula();
 	// ~~~~~~~~~~~~~~~ вызываем формулу при смене суммы или срока
+	
 	// для скрытого инпута с суммой ставим изначальный атрибут, который приходит с значения Тип кредитования
-	sumDouble.setAttribute("data-max", "12000000");
+	sumDouble.setAttribute("data-max", "12000000")
+	
 	// у видимого инпута с суммой делаем разбивку на разряды
-	sum.value = Number(sum.value.replace(/\D/g, "")).toLocaleString("ru");
+	sum.value = Number(sum.value.replace(/\D/g, "")).toLocaleString("ru")
+	
 	// меняем значение инпута - Сумма кредита
 	sum.addEventListener("input", function () {
 		// при изменении значения в инпуте, сохраняем ему разбивку на разряды
@@ -184,12 +219,20 @@ const calculator = () => {
 			this.value = Number(
 				sumDouble.dataset.max.replace(/\D/g, "")
 			).toLocaleString("ru");
-			// значение скрытого инпута так же не может превысить предел, заданный в data-max этого инпута
+			// значение скрытого инпута также не может превысить предел, заданный в data-max этого инпута
 			sumDouble.value = sumDouble.dataset.max;
 		}
+		// если значение скрытыго инпута меньше миллиона
+		if(sumDouble.value < 1000000){
+			// тогда значение видимого инпута не может измениться меньше миллиона с визуальной разбивкой на разряды
+			this.value = '1 000 000'
+			// значение скрытого инпута также не может быть меньше миллиона
+			sumDouble.value = 1000000
+		}
 		formula();
-	});
-
+	})
+	
+	// меняем значение год, года, лет
 	function changePeriodValue() {
 		switch (parseInt(periodInput.value)) {
 			case 1:
@@ -225,6 +268,7 @@ const calculator = () => {
 
 	// для инпута со сроком изначальный атрибут, который приходит с значения Тип кредитования - data-period
 	periodInput.setAttribute("data-period", "30");
+	
 	// меняем значение инпута - Срок кредита
 	periodInput.addEventListener("input", function () {
 		// если значение в инпуте срока больше или равно значению атрибута data-period этого же инпута
@@ -237,7 +281,7 @@ const calculator = () => {
 		formula();
 		changePeriodValue();
 	});
-	// ~~~~~~~~~~~~~~~ меняем значение год, года, лет
+	
 };
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FAQ
@@ -450,8 +494,9 @@ const map = () => {
 };
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-inputMask();
-sliders();
-calculator();
+scrollToSection()
+inputMask()
+sliders()
+calculator()
 accordeons(".accordeon", ".accordeon__item", ".accordeon__header", ".accordeon__content", "accordeon__item opened", "accordeon__item closed")
 animation()

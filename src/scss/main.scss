@@ -773,8 +773,57 @@ b{
 }
 
 .partners{
-	height: 300px;
+	padding: 70px 0;
 	background: var(--blueLight);
+	@media(max-width: 992px){
+		padding: 50px 0;
+	}
+	&__head{
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+	&__slider{
+		margin-top: 30px;
+		.swiper-wrapper{
+			align-items: center;
+		}
+		.swiper-slide{
+			display: flex;
+			@media(max-width: 992px){
+				justify-content: center;
+			}
+		}
+		.swiper-slide-active .partners__logo{
+			filter: grayscale(0);
+		}
+	}
+	&__logo{
+		filter: grayscale(1);
+		transition: all .3s;
+		&:hover{
+			filter: grayscale(0);
+		}
+		&--psb{
+			height: 40px;
+			object-fit: contain;	
+		}
+		&--gazprom{
+			width: 185px;
+		}
+		&--vtb{
+			width: 105px;
+		}
+		&--alfa{
+			width: 155px;
+		}
+		&--sber{
+			width: 205px;
+		}
+
+	}
 }
 
 .faq{
