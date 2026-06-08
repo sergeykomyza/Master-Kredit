@@ -33,12 +33,12 @@ document.querySelector('.js-closeFancybox').addEventListener('click', function (
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ МАСКА ДЛЯ ИНПУТОВ (https://github.com/RobinHerbots/Inputmask)
-const inputMask = () => {
-	$(".js-maskPhone").inputmask({
-		mask: "+7 (999) 99-99-999",
-		clearIncomplete: true,
-	});
-};
+// const inputMask = () => {
+// 	$(".js-maskPhone").inputmask({
+// 		mask: "+7 (999) 99-99-999",
+// 		clearIncomplete: true,
+// 	});
+// };
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ СЛАЙДЕР SWIPER (https://swiperjs.com/get-started)
 const sliders = () => {
@@ -497,7 +497,7 @@ const map = () => {
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 scrollToSection()
-inputMask()
+// inputMask()
 sliders()
 calculator()
 accordeons(".accordeon", ".accordeon__item", ".accordeon__header", ".accordeon__content", "accordeon__item opened", "accordeon__item closed")
